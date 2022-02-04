@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+    /* Menu */
+    
+    #sinLink {
+        font-family: 'DM Serif Display', serif;
+        font-style: italic;
+        }   
+    
+        .colorLinks {
+        color: white;
+        display: inline;    
+    }
+        
+     a {
+    font-family: 'DM Serif Display', serif;
+    text-decoration: none;
+    color: white;
+    opacity: 50%;
+    } 
+    
+    /* Formulario */
+    
+    label {
+        color: white;
+        font-family: 'Vollkorn', serif;
+   }
+
+   input {
+       border: 1px solid white;
+       background: none;
+   }
+
+   div {
+display: block;
+margin-left: 450px;
+
+   }
+   
+
+    /* Fondo */
+    
+    body {
+    background-image: url(../imagenes/Fondo.jpg);
+    }
+    
+    /* Footer */
+    
+    footer {
+    color: white;
+    font-family: 'Vollkorn', serif;
+    margin-left: 500px;
+        } 
+        
+            /* Fin Footer */

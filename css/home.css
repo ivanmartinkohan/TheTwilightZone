@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+    /* Cards */
+    
+     a {
+    font-family: 'DM Serif Display', serif;
+    text-decoration: none;
+    color: white;
+    } 
+    
+    div {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    height: 400px;
+    }
+      
+    .card {
+height: 250px;
+width: 250px;
+
+    }
+     
+    /* Fondo */
+    
+    body {
+    background-image: url(../imagenes/Fondo.jpg);
+    }
+    
+    /* Footer */
+    
+    footer {
+    color: white;
+    font-family: 'Vollkorn', serif;
+    margin-left: 500px;
+        } 
+        

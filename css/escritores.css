@@ -1,0 +1,209 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+/* Layout GRID */
+
+.contenedor {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 50px 250px 250px 50px;
+padding: 20px;
+}
+
+/* AYUDA VISUAL 
+.contenedor > * {
+border: 1px solid rgb(255, 255, 255);
+}
+*/
+
+
+
+nav {
+grid-column-start: 2;
+grid-column-end: 4;
+display: flex;
+justify-content: flex-end;
+align-items: center; 
+padding-right: 50px;
+padding-bottom: 30px;
+
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.escritores {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+/* Menu */
+
+.logo {
+height: 50px;
+
+}
+
+/* Menu 
+
+#sinLink {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: #E14C48;
+}
+
+.colorLinks {
+    color: white;
+    display: inline;    
+}
+
+*/
+
+ a {
+font-family: 'DM Serif Display', serif;
+text-decoration: none;
+} 
+
+
+
+/* Imagen principal */
+
+.imagenPrincipal {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    Display: flex;
+justify-content: center;
+align-items: center; 
+padding-bottom: 50px;
+}
+
+.nickT, .nickC {
+display: none;
+
+}
+
+
+/* Escritores*/
+
+ 
+   pre {
+       font-family: 'Vollkorn', serif;
+       line-height: 1.1;
+       color: white;
+       text-align: center;
+   }
+
+   .imagenEscritor {
+    height: 75%;
+    }
+
+   
+
+/* Fondo */
+body {
+    background-image: url(../imagenes/Fondo.jpg);
+    }
+
+
+/* Footer */
+
+    footer {
+        color: white;
+        font-family: 'Vollkorn', serif;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+} 
+
+/* Media Queries */
+
+@media only screen and (max-width: 780px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 250px 250px 250px 250px 50px;
+        padding: 10px;
+        }
+
+nav {
+    display: none;
+    
+    }
+
+.nickD, .nickC {
+display: none;
+        }
+        
+.nickT {
+display: block;
+height: 175%;
+}
+      
+.rSt {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.cBt {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rMt {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.imagenEscritor {
+    height: 75%;
+ }
+    
+ 
+}
+   
+@media only screen and (max-width: 425px) {
+
+    .nickD, .nickT {
+        display: none;
+                }
+                
+        .nickC {
+            Display: flex;
+            justify-content: baseline;
+            align-items: center; 
+            height: 140%;
+        }
+
+
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+}
+
+
+    }
+
+
+/* Footer 
+    #rText780, #cText780, #rmText780, #rbText780 {
+        display: block;
+        font-family: 'Vollkorn', serif;
+        line-height: 1.1;
+        color: white;
+       text-align: center;
+    }
+
+    */
