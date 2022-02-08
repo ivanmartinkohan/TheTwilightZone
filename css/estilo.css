@@ -1,0 +1,8 @@
+div form label {
+  color: white; }
+
+div form input {
+  border: 1px solid white; }
+
+div form button {
+  font-weight: bold; }
