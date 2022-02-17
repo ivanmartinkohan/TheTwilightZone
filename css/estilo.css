@@ -1,8 +1,39 @@
-div form label {
-  color: white; }
+body {
+  background-image: url(../imagenes/Fondo.jpg); }
 
-div form input {
-  border: 1px solid white; }
+#sinLink {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic; }
 
-div form button {
-  font-weight: bold; }
+.colorLinks {
+  color: white;
+  font-size: 15px;
+  display: inline; }
+
+a {
+  font-family: 'DM Serif Display', serif;
+  text-decoration: none;
+  color: white;
+  opacity: 50%; }
+
+footer {
+  font-size: small; }
+
+footer {
+  color: #BFAB8E;
+  font-family: 'Vollkorn', serif;
+  margin-left: 500px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+div {
+  display: block;
+  margin-left: 450px; }
+  div form label {
+    color: white; }
+  div form input {
+    border: 1px solid white; }
+  div form button {
+    font-weight: bold; }

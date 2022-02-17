@@ -1,14 +1,20 @@
 @import "variables";
+@import "background";
+@import "menu";
+@import "footer";
+
+
+* { margin: 0;
+    padding: 0;}
 
 
 div {
+    display: block;
+    margin-left: 450px;
  form {
-
     label {color: $color};  
     input {border: 1px solid white};
     button {font-weight: bold;}
-
+}
 }
 
-
-}

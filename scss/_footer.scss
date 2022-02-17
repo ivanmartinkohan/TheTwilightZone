@@ -1,0 +1,17 @@
+
+$colores: (
+primario: #DB4C48,
+secundario: white,
+terciario: #BFAB8E,
+);
+
+%font {
+font-size: small; 
+}
+
+footer {
+    color: map-get($colores , terciario );
+    font-family: 'Vollkorn', serif;
+    margin-left: 500px;
+    @extend %font;
+        }
