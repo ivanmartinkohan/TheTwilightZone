@@ -82,7 +82,6 @@ background-image: url(../imagenes/Fondo.jpg);
 }
     
 /* Footer */
-
     
 footer {
     color: white;
@@ -91,10 +90,16 @@ font-size: small;
 display: flex;
 justify-content: center;
 align-items: flex-end;
+margin-top: 50px;
 }      
 
 /* Portada Desktop */
  
+.filaportada {
+    height: 450px;
+    }
+
+
 .homeT {
     display: none;
      

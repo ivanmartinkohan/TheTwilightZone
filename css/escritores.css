@@ -3,108 +3,105 @@ margin: 0;
 padding: 0;
 }
 
-/* Layout GRID */
+/* Menu */    
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    background: #fff;
+    color: #000000;
+  }
+   
+  #active:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+   
+   
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+   
+  }
+   
+  input[type="checkbox"]{
+    display: none;
+  }
+  
 
-.contenedor {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 50px 250px 250px 50px;
-padding: 20px;
-}
-
-/* AYUDA VISUAL 
-.contenedor > * {
-border: 1px solid rgb(255, 255, 255);
-}
-*/
-
-
-
-nav {
-grid-column-start: 2;
-grid-column-end: 4;
-display: flex;
-justify-content: flex-end;
-align-items: center; 
-padding-right: 50px;
-padding-bottom: 30px;
-
-}
-
-footer {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-.escritores {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-}
-
-/* Menu */
-
+/* Logo */ 
 .logo {
 height: 50px;
-
-}
-
-/* Menu 
-
-#sinLink {
-    font-family: 'DM Serif Display', serif;
-    font-style: italic;
-    color: #E14C48;
-}
-
-.colorLinks {
-    color: white;
-    display: inline;    
-}
-
-*/
-
- a {
-font-family: 'DM Serif Display', serif;
-text-decoration: none;
+margin: 10px;
 } 
 
 
 
-/* Imagen principal */
-
-.imagenPrincipal {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    Display: flex;
-justify-content: center;
-align-items: center; 
-padding-bottom: 50px;
-}
-
-.nickT, .nickC {
-display: none;
-
-}
-
-
-/* Escritores*/
-
+/* Info Principal */
  
-   pre {
+   p {
        font-family: 'Vollkorn', serif;
        line-height: 1.1;
        color: white;
        text-align: center;
    }
 
-   .imagenEscritor {
-    height: 75%;
-    }
 
-   
+   /* Portadas */
+.writersT, .writersC {
+display: none;
+} 
+    
+@media only screen and (max-width: 1065px) {
+.writersD, .writersC {display: none;}
+.writersT {display: block;}
+}
+
+@media only screen and (max-width: 730px) {
+.writersD, .writersT {display: none;}
+.writersC {display: block;}
+}
+
 
 /* Fondo */
 body {
@@ -121,89 +118,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
+    margin-top: 50px;
 } 
 
-/* Media Queries */
 
-@media only screen and (max-width: 780px) {
-    .contenedor {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px 250px 250px 250px 250px 50px;
-        padding: 10px;
-        }
-
-nav {
-    display: none;
-    
-    }
-
-.nickD, .nickC {
-display: none;
-        }
-        
-.nickT {
-display: block;
-height: 175%;
-}
-      
-.rSt {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.cBt {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.rMt {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-
-.imagenEscritor {
-    height: 75%;
- }
-    
- 
-}
-   
-@media only screen and (max-width: 425px) {
-
-    .nickD, .nickT {
-        display: none;
-                }
-                
-        .nickC {
-            Display: flex;
-            justify-content: baseline;
-            align-items: center; 
-            height: 140%;
-        }
-
-
-
-header {
-    grid-column-start: 1;
-    grid-column-end: 3;
-
-
-}
-
-
-    }
-
-
-/* Footer 
-    #rText780, #cText780, #rmText780, #rbText780 {
-        display: block;
-        font-family: 'Vollkorn', serif;
-        line-height: 1.1;
-        color: white;
-       text-align: center;
-    }
-
-    */

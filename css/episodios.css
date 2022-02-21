@@ -3,70 +3,135 @@
     padding: 0;
     }
     
-    /* Menu */
-    
-    #sinLink {
-        font-family: 'DM Serif Display', serif;
-        font-style: italic;
-    opacity: 100%;
+    /* Menu */    
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    background: #fff;
+    color: #000000;
+  }
+   
+  #active:checked ~ .menu-btn i:before{
+      content: "\f00d";
     }
-    
-    .colorLinks {
-        color: white;
-        display: inline;    
-        opacity: 50%;
-    }
-    
-     a {
-    font-family: 'DM Serif Display', serif;
+   
+   
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
     text-decoration: none;
-    color: white;
-    
-    } 
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+   
+  }
+   
+  input[type="checkbox"]{
+    display: none;
+  }
+  
+
+/* Logo */ 
+.logo {
+height: 50px;
+margin: 10px;
+} 
     
     /* Lista de Episodios */
+    .container img {
+        width: 100%;
+    }
+     
+    .container .col-lg-2 {
+    padding: 5px;
+     
+    }
     
-    div {
-        border: 1px solid white;
-        display: inline-block;
-            margin: 5px;
-        }
 
-        .Episodio {
-width: 150px;
-height: 150px;
+        
 
-
-        }
-
-    h2 {
+    h1 {
         font-family: 'DM Serif Display', serif;
         color: white;
        }
 
-    h3 {  font-family: 'Vollkorn', serif;
-          color: white; 
-    }
-
-       
+         
        p {
            font-family: 'Vollkorn', serif;
            line-height: 1.1;
            color: white;
        }
     
+
+     /* Portadas */
+.episodesT, .episodesC {
+    display: none;
+    } 
+        
+    @media only screen and (max-width: 1065px) {
+    .episodesD, .episodesC {display: none;}
+    .episodesT {display: block;}
+    }
+    
+    @media only screen and (max-width: 730px) {
+    .episodesD, .episodesT {display: none;}
+    .episodesC {display: block;}
+    }
+    
     
     /* Fondo */
-    
     body {
-    background-image: url(../imagenes/Fondo.jpg);
-    }
+        background-image: url(../imagenes/Fondo.jpg);
+        }
+    
     
     /* Footer */
     
-    footer {
-    color: white;
-    font-family: 'Vollkorn', serif;
-    margin-left: 500px;
-        } 
-        
+        footer {
+            color: white;
+            font-family: 'Vollkorn', serif;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 50px;
+    } 
+    
