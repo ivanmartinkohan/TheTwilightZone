@@ -2,66 +2,79 @@
     margin: 0;
     padding: 0;
     }
-    
- /* Layout GRID   */
 
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 320px 200px 50px;
-    padding: 20px;
+/* Menu */    
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    background: #fff;
+    color: #000000;
+  }
+   
+  #active:checked ~ .menu-btn i:before{
+      content: "\f00d";
     }
-    
-/* AYUDA VISUAL 
- .contenedor > * {
-border: 1px solid rgb(255, 255, 255);
-}
-*/
+   
+   
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+   
+  }
+   
+  input[type="checkbox"]{
+    display: none;
+  }
   
-.imagenPrincipal {
-    grid-column-start: 1;
-    grid-column-end: 5;
-display: flex;
-justify-content: center;
-align-items: center;
-}
 
-.menu {
-    display: flex;
-    flex-direction: column;
-justify-content: center;
-align-items: center;
- }
+/* Logo */ 
+.logo {
+height: 50px;
+margin: 10px;
+} 
 
-footer {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        display: flex;
-        justify-content: center;
-     align-items: flex-end;
-}
-    
-
-/* Imagen Central */
-
-.rodC, .rodT, .mqC {
-display: none;
-}
-        
-
-/* Menu */
-
-.menu {
-    transition: all 2s;
-        }
-    
-.menu:hover {
- transform: scale(0.8, 0.8);
-opacity: 0;
- }
-
-
- 
 /* Fondo */
     
 body {
@@ -69,94 +82,35 @@ background-image: url(../imagenes/Fondo.jpg);
 }
     
 /* Footer */
+
     
 footer {
-color: white;
-font-family: 'Vollkorn', serif;
+    color: white;
+    font-family: 'Vollkorn', serif;
+font-size: small;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+}      
+
+/* Portada Desktop */
+ 
+.homeT {
+    display: none;
+     
+    }
+     
+    /* Media Queries - Tablet > Cel */
+     
+    @media only screen and (max-width: 768px) {
+       
+        .homeD {
+                display: none;
+                    }
+     
+    .homeT {
+    display: block;
+            }
+       }
+     
     
-} 
-        
-
-
-/* Media Queries - Tablet */
-
-@media only screen and (max-width: 780px) {
-    .contenedor {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 320px 200px 200px 50px;
-        padding: 10px;
-        }
-
-.rodC, .mqC, .rodD {
-            display: none;
-                }
-
-.mqTD, .rodT {
-display: block;
-        }
-
-.uno {
-grid-column-start: 1;
-grid-column-end: 2;
-}
-
-.dos {
-     grid-column-start: 2;
-    grid-column-end: 4;
-}
-
-.tres {
-    grid-column-start: 1;
-grid-column-end: 2;
-}
-
-.cuatro {
-grid-column-start: 2;
-grid-column-end: 4;
-}
-
-}
-    
-
-/* Media Queries - Cel */
-   
-@media only screen and (max-width: 425px) {
-
-    .contenedor {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 600px 100px 100px 100px 100px 50px;
-        padding: 10px;
-        }
-
-.rodD, .mqTD, .rodT {
-            display: none;
-                }
-
-.mqC, .rodC {
-display: block;
-        }
-
-
-        .uno {
-            grid-column-start: 1;
-   grid-column-end: 4;
-}
-
-.dos {
-grid-column-start: 1;
-grid-column-end: 4;
-}
-
-.tres {
-grid-column-start: 1;
-grid-column-end: 4;
-}
-
-.cuatro {
-grid-column-start: 1;
-grid-column-end: 4;
-}
-
-}
