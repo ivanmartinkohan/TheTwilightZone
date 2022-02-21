@@ -5,13 +5,14 @@ secundario: white,
 terciario: #BFAB8E,
 );
 
-%font {
-font-size: small; 
-}
+/* Footer */   
 
 footer {
     color: map-get($colores , terciario );
     font-family: 'Vollkorn', serif;
-    margin-left: 500px;
-    @extend %font;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 50px;
         }

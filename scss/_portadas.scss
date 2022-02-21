@@ -1,0 +1,21 @@
+
+/* Portadas */
+
+.filaportada {
+    height: 450px;
+    }
+
+.contactT, .contactC, .homeT, .writersT, .writersC, .soundtrackT, .soundtrackC, .episodesT, .episodesC {
+    display: none;
+    } 
+        
+    @media only screen and (max-width: 1065px) {
+    .contactD, .contactC, .writersD, .writersC, .soundtrackD, .soundtrackC, .episodesD, .episodesC {display: none;}
+    .contactT, .writersT, .soundtrackT, .episodesT {display: block;}
+    }
+    
+    @media only screen and (max-width: 730px) {
+    .contactD, .contactT, .homeD, .writersD, .writersT, .soundtrackD, .soundtrackT, .episodesD, .episodesT {display: none;}
+    .contactC, .homeT, .writersC, .soundtrackC, .episodesC {display: block;}
+    }
+    

@@ -1,0 +1,24 @@
+
+/* Puerta */
+
+.filapuerta {
+    height: 550px;
+    }
+
+.columnapuerta {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    }
+
+    .puerta {
+transition: all 2s;
+&:hover {
+    transform: scale(0.8, 0.8);
+    opacity: 0;
+    } 
+
+    }
+
+

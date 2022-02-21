@@ -1,0 +1,73 @@
+/* Logo */ 
+.logo {
+    height: 50px;
+    margin: 10px;
+    } 
+
+ /* Menu */  
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+    ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        li{
+            margin: 15px 0;
+            a{
+                color: none;
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: 500;
+                padding: 5px 30px;
+                color: #fff;
+                            }
+         }  
+       
+    }
+
+  }
+
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out;
+
+  }
+  #active:checked ~ .menu-btn{
+    background: #fff;
+    color: #000000;
+  }
+   
+  #active:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+      
+  input[type="checkbox"]{
+    display: none;
+  }
