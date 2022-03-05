@@ -8,3 +8,14 @@
     padding: 5px;
      
     }
+
+      /* Animacion */
+  
+     .episodiosAnimacion {
+        transition: all 1s;
+        &:hover {
+            transform: scale(0.3, 0.3);
+            opacity: 0;
+            } 
+        
+            }
